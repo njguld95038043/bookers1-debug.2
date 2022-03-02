@@ -2,6 +2,11 @@ class BooksController < ApplicationController
   def top
   end
 
+  def search
+    @books = RakutenWebService::Books::Book.search(booksGenreId: "001005")
+    render json: { status: 'success', data: @books }
+  end
+
   def index
     @books = Book.all
     @book = Book.new

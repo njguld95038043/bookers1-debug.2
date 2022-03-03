@@ -12,7 +12,7 @@ class BooksController < ApplicationController
   def index
   if params[:keyword]
     @books = RakutenWebService::Books::Book.search(title: params[:keyword])
-    render json: {status: 'success', data:@books}
+    # render json: {status: 'success', data:@books}
   end
   end
 

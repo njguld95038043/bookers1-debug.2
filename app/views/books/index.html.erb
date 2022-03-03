@@ -3,9 +3,12 @@
 <% @books.each do |book| %>
   <div class="commic-data">
     <%= link_to (image_tag(book.large_image_url)), book.item_url %>
-    <%= book.title %>
-    <%= book.sales_date %>
+    <%= book.title %><br />
+    <%= book.author %><br />
     <%= book.isbn%><br />
-    <%= book.item_price %>
+    <%= book.sales_date %><br />
+    <%= book.item_price %><br />
+    <%= book.item_caption %><br />
+    <%= book.publisher_name %><br />
   </div>
 <% end %>

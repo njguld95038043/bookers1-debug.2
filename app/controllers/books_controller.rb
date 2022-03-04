@@ -11,6 +11,7 @@ class BooksController < ApplicationController
 
   def index
   if params[:keyword]
+    # binding.pry
     @books = RakutenWebService::Books::Book.search(title: params[:keyword])
     # render json: {status: 'success', data:@books}
   end
